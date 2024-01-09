@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction, useState } from "react";
-import "./index.css";
+import "./useContext.css";
 import Page from "./components/Page";
 
 export interface stateProps {

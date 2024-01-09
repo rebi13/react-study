@@ -5,7 +5,7 @@ import Header from "./Header";
 
 const Page = ({ isDark, setIsDark }: stateProps) => {
   return (
-    <div>
+    <div className="page">
       <Header isDark={isDark} />
       <Content isDark={isDark} />
       <Footer isDark={isDark} setIsDark={setIsDark} />

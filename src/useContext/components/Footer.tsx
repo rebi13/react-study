@@ -1,14 +1,14 @@
 import { stateProps } from "..";
 
-const Footer = ({ isDark, setIsDark }: stateProps) => {
+const Footer: React.FC<stateProps> = ({ isDark, setIsDark }) => {
   const toggleTheme = () => {
-    setIsDark(!isDark);
+    setIsDark && setIsDark(!isDark);
   };
   return (
     <footer
       className="footer"
       style={{
-        backgroundClip: isDark ? "black" : "lightgray",
+        backgroundColor: isDark ? "black" : "lightgray",
       }}
     >
       <button className="button" onClick={toggleTheme}>

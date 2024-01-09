@@ -1,11 +1,11 @@
 import { stateProps } from "..";
 
-const Header = ({ isDark }: stateProps) => {
+const Header: React.FC<stateProps> = ({ isDark }) => {
   return (
     <header
       className="header"
       style={{
-        backgroundClip: isDark ? "black" : "lightgray",
+        backgroundColor: isDark ? "black" : "lightgray",
         color: isDark ? "white" : "black",
       }}
     >

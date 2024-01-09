@@ -1,11 +1,11 @@
 import { stateProps } from "..";
 
-const Content = ({ isDark }: stateProps) => {
+const Content: React.FC<stateProps> = ({ isDark }) => {
   return (
     <div
       className="content"
       style={{
-        backgroundClip: isDark ? "black" : "lightgray",
+        backgroundColor: isDark ? "black" : "lightgray",
         color: isDark ? "white" : "black",
       }}
     >
