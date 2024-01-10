@@ -14,6 +14,12 @@ type Action = {
   }; // 페이로드는 선택 사항이며 필요에 따라 조정할 수 있습니다.
 };
 
+export const ACTION_TYPES = {
+  ADD_STUDENT: "add-student" as const,
+  DELETE_STUDENT: "delete-student" as const,
+  MARK_STUDENT: "mark-student" as const,
+};
+
 const reducer = (state: State, action: Action): State => {
   // 이상한 action을 보내면 아무 일이 발생하지 않고 기존 state만 반환해줌
   const actions = {
@@ -68,7 +74,9 @@ const UseReducerEx2 = () => {
         onChange={(e) => setName(e.target.value)}
       />
       <button
-        onClick={() => dispatch({ type: "add-student", payload: { name } })}
+        onClick={() =>
+          dispatch({ type: ACTION_TYPES.ADD_STUDENT, payload: { name } })
+        }
       >
         추가
       </button>

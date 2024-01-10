@@ -1,3 +1,5 @@
+import { ACTION_TYPES } from ".";
+
 interface StudentProps {
   name: string;
   dispatch: any;
@@ -13,14 +15,14 @@ const Student = ({ name, dispatch, id, isHere }: StudentProps) => {
           color: isHere ? "gray" : "black",
         }}
         onClick={() => {
-          dispatch({ type: "mark-student", payload: { id } });
+          dispatch({ type: ACTION_TYPES.MARK_STUDENT, payload: { id } });
         }}
       >
         {name}
       </span>
       <button
         onClick={() => {
-          dispatch({ type: "delete-student", payload: { id } });
+          dispatch({ type: ACTION_TYPES.DELETE_STUDENT, payload: { id } });
         }}
       >
         삭제
