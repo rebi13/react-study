@@ -2,7 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 
 import App from "../App";
 import UseContext from "../useContext";
-import UseReducer from "../useReducer";
+import UseReducerEx1 from "../useReducer/example1";
+import UseReducerEx2 from "../useReducer/example2";
 
 const Router = createBrowserRouter([
   {
@@ -11,7 +12,8 @@ const Router = createBrowserRouter([
     children: [
       { index: true, path: "/", element: <App /> },
       { path: "/useContext", element: <UseContext /> },
-      { path: "/useReducer", element: <UseReducer /> },
+      { path: "/useReducer-ex1", element: <UseReducerEx1 /> },
+      { path: "/useReducer-ex2", element: <UseReducerEx2 /> },
     ],
   },
 ]);
