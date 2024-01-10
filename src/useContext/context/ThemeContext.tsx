@@ -1,10 +1,10 @@
 import { Dispatch, SetStateAction, createContext } from "react";
 
-export interface stateProps {
+export interface ThemeContextProps {
   isDark: boolean;
   setIsDark?: Dispatch<SetStateAction<boolean>>;
 }
 
-export const ThemeContext = createContext<stateProps>({
+export const ThemeContext = createContext<ThemeContextProps>({
   isDark: false,
 });

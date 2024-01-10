@@ -1,6 +1,8 @@
-import { stateProps } from "../context/ThemeContext";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
-const Footer: React.FC<stateProps> = ({ isDark, setIsDark }) => {
+const Footer = () => {
+  const { isDark, setIsDark } = useContext(ThemeContext);
   const toggleTheme = () => {
     setIsDark && setIsDark(!isDark);
   };

@@ -1,6 +1,11 @@
-import { stateProps } from "../context/ThemeContext";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
+import { UserContext } from "../context/UserContext";
 
-const Header: React.FC<stateProps> = ({ isDark }) => {
+const Header = () => {
+  const { isDark } = useContext(ThemeContext);
+  const user = useContext(UserContext);
+
   return (
     <header
       className="header"
@@ -9,7 +14,7 @@ const Header: React.FC<stateProps> = ({ isDark }) => {
         color: isDark ? "white" : "black",
       }}
     >
-      <h1>Welcome 홍길동!</h1>
+      <h1>Welcome {user}!</h1>
     </header>
   );
 };
