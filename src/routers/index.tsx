@@ -1,22 +1,19 @@
-import { lazy } from "react";
+import { createBrowserRouter } from "react-router-dom";
 
-const App = lazy(() => import("../App"));
-const UseContext = lazy(() => import("../useContext"));
-const UseReducer = lazy(() => import("../useReducer"));
+import App from "../App";
+import UseContext from "../useContext";
+import UseReducer from "../useReducer";
 
-const routePaths = [
+const Router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    children: [
+      { index: true, path: "/", element: <App /> },
+      { path: "/useContext", element: <UseContext /> },
+      { path: "/useReducer", element: <UseReducer /> },
+    ],
   },
-  {
-    path: "/useContext",
-    element: <UseContext />,
-  },
-  {
-    path: "/useReducer",
-    element: <UseReducer />,
-  },
-];
+]);
 
-export default routePaths;
+export default Router;

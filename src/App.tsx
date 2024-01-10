@@ -1,23 +1,8 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
-import routePaths from "./routers";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
-  return (
-    <>
-      <Routes>
-        {routePaths.map((route) => {
-          return (
-            <Route
-              key={route.path}
-              path={route.path}
-              element={route.element}
-            ></Route>
-          );
-        })}
-      </Routes>
-    </>
-  );
+  return <Outlet />;
 };
 
 export default App;
