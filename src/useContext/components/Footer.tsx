@@ -1,4 +1,4 @@
-import { stateProps } from "..";
+import { stateProps } from "../context/ThemeContext";
 
 const Footer: React.FC<stateProps> = ({ isDark, setIsDark }) => {
   const toggleTheme = () => {

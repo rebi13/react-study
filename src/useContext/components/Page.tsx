@@ -1,4 +1,4 @@
-import { stateProps } from "..";
+import { stateProps } from "../context/ThemeContext";
 import Content from "./Content";
 import Footer from "./Footer";
 import Header from "./Header";

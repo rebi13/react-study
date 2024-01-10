@@ -1,4 +1,4 @@
-import { stateProps } from "..";
+import { stateProps } from "../context/ThemeContext";
 
 const Content: React.FC<stateProps> = ({ isDark }) => {
   return (
