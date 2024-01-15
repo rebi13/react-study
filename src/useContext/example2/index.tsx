@@ -1,10 +1,10 @@
 import { useState } from "react";
-import "./useContext.css";
+import "../useContext.css";
 import Page from "./components/Page";
 import { ThemeContext } from "./context/ThemeContext";
 import { UserContext } from "./context/UserContext";
 
-const UseContext = () => {
+const UseContextEx2 = () => {
   // 페이지가 다크모드인지 아닌지를 상태로 관리
   const [isDark, setIsDark] = useState<boolean>(false);
 
@@ -17,4 +17,4 @@ const UseContext = () => {
   );
 };
 
-export default UseContext;
+export default UseContextEx2;

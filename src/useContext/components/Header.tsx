@@ -1,11 +1,6 @@
-import { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
-import { UserContext } from "../context/UserContext";
+import { IsDarkProps } from "../example1";
 
-const Header = () => {
-  const { isDark } = useContext(ThemeContext);
-  const user = useContext(UserContext);
-
+const Header = ({ isDark }: IsDarkProps) => {
   return (
     <header
       className="header"
@@ -14,7 +9,7 @@ const Header = () => {
         color: isDark ? "white" : "black",
       }}
     >
-      <h1>Welcome {user}!</h1>
+      <h1>Welcome 사용자!</h1>
     </header>
   );
 };
