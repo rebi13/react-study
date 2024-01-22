@@ -1,13 +1,12 @@
 import ReactDOM from "react-dom/client";
+import App from "./App";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { RouterProvider } from "react-router-dom";
-import Router from "./routers";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
-root.render(<RouterProvider router={Router}></RouterProvider>);
+root.render(<App />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
