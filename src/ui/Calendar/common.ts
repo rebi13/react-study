@@ -1,4 +1,17 @@
 /**
+ * 달력의 요일을 나타내는 배열
+ */
+const days = [
+  { day: "일", $isSat: false, $isHol: true },
+  { day: "월", $isSat: false, $isHol: false },
+  { day: "화", $isSat: false, $isHol: false },
+  { day: "수", $isSat: false, $isHol: false },
+  { day: "목", $isSat: false, $isHol: false },
+  { day: "금", $isSat: false, $isHol: false },
+  { day: "토", $isSat: true, $isHol: false },
+];
+
+/**
  * 해당 월의 마지막 날짜를 구하는 함수
  * @param year number 타입의 년도
  * @param month number 타입의 월
@@ -31,4 +44,4 @@ const getMonthlyDate = (
   }
 };
 
-export { getMonthlyDate };
+export { days, getMonthlyDate };
